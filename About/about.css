@@ -212,7 +212,7 @@ img{
 
 .pagetitle2{
   margin-top: 68%;
-  margin-bottom: 15%;
+  margin-bottom: 5%;
   border: 3px solid rgb(255, 255, 255);
   border-radius: 2vh;
   margin-left: -8%;
@@ -251,6 +251,55 @@ img{
   grid-template-columns: auto auto auto;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Work Experience */
+.experience{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vw;
+  border: none;
+  margin-bottom: 20vh;
+}
+.horizontal{
+  display: flex;
+  height: 0px;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  border: 5px solid white;
+}
+.vertical{
+  height: 33vh;
+  display: flex;
+  text-align: center;
+  margin-top: 10vh;
+}
+.verticleline{
+  z-index: 3;
+  display: block;
+  height: 10vh;
+  width: 0px;
+  margin: auto 0 auto -5vh;
+  border: 2px solid white;
+}
+
 
 
 
