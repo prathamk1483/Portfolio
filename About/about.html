@@ -53,10 +53,13 @@
         <nav>
             <div class="left">
                 <ul>
-
-                  <a href="./About/about.html"><li>About</li></a>
-                  <a href="../Projects/projectpage.html"><li>Projects</li></a>
-                  <a href="./Contact/contactbg.html"><li>Contact</li></a>
+                  <div class="unhidden"><a href="./About/about.html"><li>About</li></a></div>
+                  <div class="unhidden"><a href="../Projects/projectpage.html"><li>Projects</li></a></div>
+                  <div class="unhidden"><a href="./Contact/contactbg.html"><li>Contact</li></a></div>
+                  <div class="hidden"><a href="#SkillSection"><li>Skills</li></a></div>
+                  <div class="hidden"><a href="#ExperienceSection"><li>Experience</li></a></div>
+                  <div class="hidden"><a href="#CodingProfileSection"><li>Coding Profile</li></a></div>
+                  <div class="hidden"><a href="#FreeLanceSection"><li>FreeLance</li></a></div>
                 </ul>
             </div>
             <!-- <div class="right">
@@ -96,7 +99,7 @@
 
 
 
-    <div class="pagetitle2">
+    <div class="pagetitle2" id="SkillSection">
       <h1>My Skills</h1>
     </div>
     <br>
@@ -243,16 +246,27 @@
 
 
 
-    <div class="pagetitle2">
+    <div class="pagetitle2" id="ExperienceSection">
       <h1>My Experience </h1>
+    </div>
+    <div class="experience" >
+      <h1>Coming Soon</h1>
+    </div>
+    <br>
+    <div class="pagetitle2" id="CodingProfileSection">
+      <h1>Coding Profiles </h1>
     </div>
     <div class="experience">
       <h1>Coming Soon</h1>
     </div>
     <br>
-
-
-
+    <div class="pagetitle2" id="FreeLanceSection">
+      <h1>FreeLance Work </h1>
+    </div>
+    <div class="experience">
+      <h1>Coming Soon</h1>
+    </div>
+    <br>
 
 
 
@@ -298,6 +312,39 @@
 
 
 <!-- partial -->
+<script>
+  const element = document.querySelector('.thispage');
+  let isScrolled = false;
+  const hiddenElements = document.querySelectorAll('.hidden');
+  const unhiddenElements = document.querySelectorAll('.unhidden');
+
+  element.onscroll = function() {
+    if (element.scrollTop >= window.innerHeight && !isScrolled) {
+      isScrolled = true;
+      swapClasses(isScrolled);
+    } else if (element.scrollTop < window.innerHeight && isScrolled) {
+      isScrolled = false;
+      swapClasses(isScrolled);
+    }
+  };
+
+  function swapClasses(isScrolled) {
+    const hiddenElements = document.querySelectorAll('.hidden');
+    const unhiddenElements = document.querySelectorAll('.unhidden');
+
+    
+           hiddenElements.forEach(el => {
+            el.classList.remove('hidden');
+            el.classList.add('unhidden');
+          });
+          unhiddenElements.forEach(el => {
+                el.classList.remove('unhidden');
+                el.classList.add('hidden');
+
+            });
+  }
+
+</script>
 <script  src="./about.js"></script>
 
 </body>
