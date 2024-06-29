@@ -1,4 +1,6 @@
-
+html {
+  
+}
 body {
   width: 100vw;
   height: 100vh;
@@ -40,12 +42,16 @@ canvas {
   justify-content: space-around;
   overflow-x: hidden;
   height: 100vh;
+  scroll-behavior: smooth;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.hidden{
+  visibility: hidden;
+  display: none;
+}
 .landing{
   display: flex;
   justify-content: center;
@@ -120,10 +126,8 @@ nav{
   border-radius: 2vh;
   height: 60%;
   width: 60%;
-
   flex-direction: column;
   align-items: center;
-
 }
 #pagetitle2{
   margin-top: -10%;
